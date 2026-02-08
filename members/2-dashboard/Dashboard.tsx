@@ -16,8 +16,10 @@ import { DemandStore } from 'frontend-shell/utils/demandStore';
 import { extractIntentAndEntity } from 'frontend-shell/utils/intentExtractor';  
 import { CensusZone, TimeWindow, CensusDetection, DaySelection } from 'frontend-shell/types';
 import hark from 'hark';
+import { DashboardEnhanced } from './DashboardEnhanced';
 
-export const Dashboard: React.FC = () => {
+// Keep original dashboard code but export the enhanced version below
+const DashboardOriginal: React.FC = () => {
     const { currentIntent, confidenceScore, detectedText, visualMode, setAudioLevel, setAudioSpectrum, setIntent } = useStore();
     const { globalTrends, lastDetections, timeWindow, currentZone, adScreens, updateZoneTrends, updateGlobalTrends, addDetection, setTimeWindow: setStoreTimeWindow, setZone: setStoreZone, setAdForZone, setAdForAllZones, seedAds } = useCensusStore();
 
@@ -846,3 +848,6 @@ export const Dashboard: React.FC = () => {
         </div>
     );
 };
+
+// Export the enhanced version with Heatmap, Insights, and Staff tabs
+export const Dashboard = DashboardEnhanced;
