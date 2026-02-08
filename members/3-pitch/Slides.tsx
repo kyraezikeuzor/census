@@ -100,25 +100,22 @@ interface DemoSlideProps {
 
 export const SolutionSlide: React.FC<DemoSlideProps> = ({ onStartDemo }) => {
     return (
-        <div className="h-screen w-screen bg-[#1e1e1e] text-white">
-            <div className="h-full w-full max-w-6xl mx-auto px-8 py-16 flex flex-col justify-center items-center gap-8">
-                <div className="text-center mt-24">
-                    <div className="text-cyan-300 text-xs tracking-[0.3em] uppercase mb-3">The Solution</div>
-                    <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
-                        We offer personalized support that everyone deserves.
-                    </h1>
-                </div>
+        <div className="relative h-screen w-full bg-[#1e1e1e] text-white overflow-hidden">
+            <img
+                src={solutionImg}
+                alt="Solution Visual"
+                className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/30" />
+            <div className="absolute inset-0 bg-black/10" />
 
-                {onStartDemo && (
-                    <button
-                        onClick={onStartDemo}
-                        className="px-6 py-3 uppercase w-[300px] bg-blue-600 hover:bg-blue-500 text-xl font-bold rounded-lg transition"
-                    >
-                        Start Live Demo
-                    </button>
-                )}
+            <div className="relative z-10 h-full w-full flex flex-col items-center justify-start pt-16 px-8">
+                <div className="text-cyan-300 text-xs tracking-[0.35em] uppercase mb-3">The Solution</div>
+                <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-center max-w-4xl">
+                    We offer personalized support that everyone deserves.
+                </h1>
 
-                {/*<div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
                     {[
                         {
                             tag: 'TAKE ACTION',
@@ -139,26 +136,16 @@ export const SolutionSlide: React.FC<DemoSlideProps> = ({ onStartDemo }) => {
                             accent: 'text-sky-300',
                         },
                     ].map((card) => (
-                        <div key={card.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-xl">
+                        <div key={card.title} className="bg-black/45 border border-white/10 rounded-2xl p-6 shadow-2xl backdrop-blur-sm">
                             <div className={`text-[11px] tracking-widest uppercase ${card.accent}`}>{card.tag}</div>
                             <h3 className="mt-4 text-2xl font-semibold">{card.title}</h3>
                             <p className="mt-3 text-white/70 leading-relaxed">{card.body}</p>
                         </div>
                     ))}
-                </div>*/}
-
-                <div className="mt-4">
-                    <img
-                        src={solutionImg}
-                        alt="Solution Visual"
-                        className="w-fit h-[80%]"
-                    />
                 </div>
-
             </div>
         </div>
     );
 };
-
 
 

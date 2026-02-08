@@ -30,7 +30,7 @@ export const PitchDeck: React.FC<PitchDeckProps> = ({ onStartDemo }) => {
     return (
         <div className="relative w-full h-screen">
             {currentSlide === slides.length - 1 ? (
-                <CurrentSlideComponent onStartDemo={onStartDemo} />
+                <SolutionSlide onStartDemo={onStartDemo} />
             ) : (
                 <CurrentSlideComponent />
             )}
