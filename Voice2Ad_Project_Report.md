@@ -1,8 +1,8 @@
-# Voice2Ad Project Report
+# Census Project Report
 
 ## Executive Summary
 
-Voice2Ad is an autonomous real-time advertising platform that transforms mall PA announcements into targeted, visual digital signage campaigns instantly. By leveraging advanced speech-to-text, semantic analysis, and generative AI, the system detects context from live audio streams (e.g., "lost child," "flash sale," "store closing") and instantaneously deploys relevant, high-value visual content to mall screens. This eliminates the latency of traditional ad scheduling, solving the "dead air" problem in digital out-of-home (DOOH) advertising while maximizing engagement and revenue for venue operators.
+Census is an autonomous real-time advertising platform that transforms mall PA announcements into targeted, visual digital signage campaigns instantly. By leveraging advanced speech-to-text, semantic analysis, and generative AI, the system detects context from live audio streams (e.g., "lost child," "flash sale," "store closing") and instantaneously deploys relevant, high-value visual content to mall screens. This eliminates the latency of traditional ad scheduling, solving the "dead air" problem in digital out-of-home (DOOH) advertising while maximizing engagement and revenue for venue operators.
 
 ## Problem Statement
 
@@ -14,7 +14,7 @@ Advertisers struggle with "banner blindness" and relevance. A generic shoe ad di
 
 ## Solution Overview
 
-Voice2Ad introduces a "Listen-Think-Act" loop for physical spaces:
+Census introduces a "Listen-Think-Act" loop for physical spaces:
 
 1.  **Listen:** A network of edge-deployed microphones captures ambient audio and PA announcements.
 2.  **Think:** A local LLM-based agent (Dedalus) transcribes, cleans, and analyzes the intent of the speech.
