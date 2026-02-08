@@ -1,16 +1,16 @@
-# 🚀 Swap Dashboard to See Enhancements NOW
+# Swap Dashboard to See Enhancements NOW
 
 Replace the current Dashboard with the Enhanced version in 30 seconds.
 
 ---
 
-## 📁 File to Edit
+## File to Edit
 
 **Location:** `members/2-dashboard/Dashboard.tsx`
 
 ---
 
-## 🔧 What to Do
+## What to Do
 
 ### Option 1: Quick Swap (RECOMMENDED)
 
@@ -66,7 +66,7 @@ Save a backup of the original first if you want!
 
 ---
 
-## ✅ Verify It Works
+## Verify It Works
 
 After making the change:
 
@@ -103,7 +103,7 @@ After making the change:
 
 ---
 
-## 🎯 Tabs You'll See
+## Tabs You'll See
 
 | Tab | Icon | What It Shows | Color |
 |-----|------|--------------|-------|
@@ -116,7 +116,7 @@ Plus language selector [EN▼] in top right!
 
 ---
 
-## 🔄 If Something Goes Wrong
+## If Something Goes Wrong
 
 **Option 1: Revert**
 Just undo the change (Ctrl+Z) and reload
@@ -129,7 +129,7 @@ Press F12 → Console → Look for errors
 
 ---
 
-## 📸 What You'll See
+## What You'll See
 
 ### Recording Tab (default view)
 ```
@@ -184,7 +184,7 @@ No active alerts yet
 
 ---
 
-## 🧪 Test It
+## Test It
 
 After enabling:
 
@@ -199,7 +199,7 @@ After enabling:
 
 ---
 
-## ⚡ Performance
+## Performance
 
 - Tabs switch instantly
 - Heatmap updates in real-time
@@ -210,7 +210,7 @@ After enabling:
 
 ---
 
-## 📍 Layout Structure
+## Layout Structure
 
 Your app layout:
 
@@ -234,7 +234,7 @@ Your app layout:
 
 ---
 
-## ✅ Checklist
+## Checklist
 
 - [ ] Opened `members/2-dashboard/Dashboard.tsx`
 - [ ] Changed the export to use `DashboardEnhanced`
@@ -247,7 +247,7 @@ Your app layout:
 
 ---
 
-## 🎉 You're Done!
+## You're Done!
 
 The enhancements are now live in your app!
 
@@ -259,7 +259,7 @@ Try recording something and watch:
 
 ---
 
-## 💬 Questions?
+## Questions?
 
 See `UI_IMPROVEMENTS_VISUAL.md` for before/after screenshots
 
