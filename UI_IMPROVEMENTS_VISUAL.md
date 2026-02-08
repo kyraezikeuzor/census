@@ -366,7 +366,6 @@ Total Load Time:        <2 seconds
 2. In App.tsx: import { DashboardEnhanced } from './DashboardEnhanced';
 3. Replace: export const Dashboard = DashboardEnhanced;
 4. Refresh browser
-5. Enjoy! 🎉
 ```
 
 ### To See Features:
@@ -418,5 +417,4 @@ Swipe navigation
 
 ---
 
-Built for HackGT 2026
-*Beautiful, Powerful, Actionable*
+Built for DevFest 2026
