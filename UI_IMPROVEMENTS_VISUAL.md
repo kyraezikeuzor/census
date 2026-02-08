@@ -1,4 +1,4 @@
-# 🎨 UI Improvements Visual Guide
+# UI Improvements Visual Guide
 
 See exactly what the enhanced Dashboard looks like.
 
