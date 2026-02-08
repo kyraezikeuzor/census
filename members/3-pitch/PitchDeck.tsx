@@ -9,7 +9,6 @@ const slides = [
     { component: LandingSlide, name: 'Welcome' },
     { component: ProblemSlide, name: 'Problem' },
     { component: SolutionSlide, name: 'Solution' },
-    { component: DemoSlide, name: 'Demo' },
 ];
 
 export const PitchDeck: React.FC<PitchDeckProps> = ({ onStartDemo }) => {
@@ -41,7 +40,7 @@ export const PitchDeck: React.FC<PitchDeckProps> = ({ onStartDemo }) => {
                 <button
                     onClick={goToPrevious}
                     className="fixed top-1/2 -translate-y-1/2 z-50 p-4 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all"
-                    style={{ left: 'calc(25% - 20px)' }}
+                    style={{ left: '16px' }}
                     aria-label="Previous slide"
                 >
                     <svg
@@ -65,7 +64,7 @@ export const PitchDeck: React.FC<PitchDeckProps> = ({ onStartDemo }) => {
                 <button
                     onClick={goToNext}
                     className="fixed top-1/2 -translate-y-1/2 z-50 p-4 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-sm transition-all"
-                    style={{ right: 'calc(25% - 20px)' }}
+                    style={{ right: '16px' }}
                     aria-label="Next slide"
                 >
                     <svg

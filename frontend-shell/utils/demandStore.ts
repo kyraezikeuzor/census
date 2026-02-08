@@ -131,7 +131,8 @@ export class DemandStore {
       if (b.count !== a.count) {
         return b.count - a.count;
       }
-      return (b.lastSeen || 0) - (a.lastSeen || 0);
+      // If counts tie, prefer the most recently seen
+      return (b.lastSeen || 0) < (a.lastSeen || 0) ? -1 : (b.lastSeen || 0) > (a.lastSeen || 0) ? 1 : 0;
     });
 
     return sorted.slice(0, topN);
@@ -163,7 +164,8 @@ export class DemandStore {
       if (b.count !== a.count) {
         return b.count - a.count;
       }
-      return (b.lastSeen || 0) - (a.lastSeen || 0);
+      // If counts tie, prefer the most recently seen
+      return (b.lastSeen || 0) < (a.lastSeen || 0) ? -1 : (b.lastSeen || 0) > (a.lastSeen || 0) ? 1 : 0;
     });
 
     return sorted.slice(0, topN);

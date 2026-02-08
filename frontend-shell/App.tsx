@@ -69,7 +69,7 @@ const App: React.FC = () => {
 
     // Demo view: 3D visualization + Dashboard with integrated Census recording
     return (
-        <div className="w-full h-screen items-between flex transition-colors duration-1000 bg-black">
+        <div className="w-full h-screen items-between flex transition-colors duration-1000 bg-[#1e1e1e]">
             <EventSimulator
                 theme={theme}
                 onToggleTheme={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

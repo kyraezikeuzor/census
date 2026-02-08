@@ -9,7 +9,7 @@ type Props = {
 
 export const EventSimulator: React.FC<Props> = ({ theme, onToggleTheme }) => {
     const { setIntent, reset } = useStore();
-    const { currentZone, setAdForZone, setAdForAllZones } = useCensusStore();
+    const { currentZone, setAdForZone, setAdForAllZones, reset: resetCensus } = useCensusStore();
 
     return (
         <div className="fixed bottom-4 left-4 z-50 flex gap-2 bg-zinc-900/80 p-2 rounded-lg border border-zinc-700 backdrop-blur-md">
@@ -43,7 +43,10 @@ export const EventSimulator: React.FC<Props> = ({ theme, onToggleTheme }) => {
                 FIRE ALERT
             </button>
             <button
-                onClick={reset}
+                onClick={() => {
+                    reset();
+                    resetCensus();
+                }}
                 className="px-3 py-1 bg-zinc-700 hover:bg-zinc-600 text-xs font-bold rounded"
             >
                 RESET
