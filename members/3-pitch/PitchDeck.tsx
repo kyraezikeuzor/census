@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LandingSlide, ProblemSlide, SolutionSlide, DemoSlide } from './Slides';
+import { LandingSlide, ProblemSlide, SolutionSlide } from './Slides';
 
 interface PitchDeckProps {
     onStartDemo?: () => void;
