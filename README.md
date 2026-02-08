@@ -2,7 +2,7 @@
 
 Ambient voice‑intent aggregation system. **Sense → Think → Act** without storing conversations.
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 npm install
@@ -69,7 +69,7 @@ Record: *“Where can I find Crumbl cookies?”*
 - **Entity:** Crumbl
 - **Result:** Trends and zone display update in real time
 
-## 🔐 Privacy
+## Privacy
 
 - ✅ Audio processed ephemerally (discarded after transcription)
 - ✅ No transcripts stored
@@ -94,7 +94,7 @@ VITE_DEDALUS_KEY=your_key_here
 - Recharts (charts)
 - Vite + Vitest
 
-## 📊 Scripts
+## Scripts
 
 ```bash
 npm run dev       # Start dev server

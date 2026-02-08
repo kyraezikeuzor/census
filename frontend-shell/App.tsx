@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { PitchDeck } from '../members/3-pitch/PitchDeck';
 import { Dashboard } from '../members/2-dashboard/Dashboard';
+import { AnalyticsDashboard } from '../members/2-dashboard/AnalyticsDashboard';
 import { Canvas } from '@react-three/fiber';
 import { MainScene } from '../members/1-threejs/MainScene';
 import { EventSimulator } from './EventSimulator';
@@ -11,9 +12,10 @@ import { useCensusStore } from '@core/censusStore';
 // Members should call for updates if they need structural changes.
 
 const App: React.FC = () => {
-    const [view, setView] = useState<'pitch' | 'demo'>(() => {
+    const [view, setView] = useState<'pitch' | 'demo' | 'analytics'>(() => {
         const path = window.location.pathname;
         if (path === '/demo') return 'demo';
+        if (path === '/analytics') return 'analytics';
         return 'pitch';
     });
     const visualMode = useStore(state => state.visualMode);
@@ -32,6 +34,8 @@ const App: React.FC = () => {
     useEffect(() => {
         if (view === 'demo' && window.location.pathname !== '/demo') {
             window.history.pushState({}, '', '/demo');
+        } else if (view === 'analytics' && window.location.pathname !== '/analytics') {
+            window.history.pushState({}, '', '/analytics');
         } else if (view === 'pitch' && window.location.pathname !== '/') {
             window.history.pushState({}, '', '/');
         }
@@ -43,6 +47,8 @@ const App: React.FC = () => {
             const path = window.location.pathname;
             if (path === '/demo') {
                 setView('demo');
+            } else if (path === '/analytics') {
+                setView('analytics');
             } else {
                 setView('pitch');
             }
@@ -63,6 +69,20 @@ const App: React.FC = () => {
                 <div className="fixed bottom-16 right-4 text-xs text-gray-500 opacity-50 bg-black/50 p-2 rounded">
                     DEEP LABS // VOICE2AD // STANDBY
                 </div>
+            </div>
+        );
+    }
+
+    if (view === 'analytics') {
+        return (
+            <div className="w-full h-screen overflow-auto bg-slate-900">
+                <AnalyticsDashboard />
+                <button
+                    onClick={() => setView('demo')}
+                    className="fixed bottom-4 right-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-mono z-50 transition-colors"
+                >
+                    ← Back to Demo
+                </button>
             </div>
         );
     }
@@ -94,6 +114,13 @@ const App: React.FC = () => {
             {/* Dashboard Panel (Member 2) - now with integrated Census recording */}
             <div className="w-[800px] h-full border-l border-white/5 ">
                 <Dashboard />
+                <button
+                    onClick={() => setView('analytics')}
+                    className="absolute bottom-4 right-4 px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded text-xs font-mono z-40 transition-colors"
+                    title="View company analytics dashboard"
+                >
+                    📊 Analytics
+                </button>
             </div>
         </div>
     );
