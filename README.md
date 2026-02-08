@@ -1,53 +1,111 @@
-# Voice2Ad - Hackathon Repository
+# Voice2Ad | Census Hackathon Demo
 
-**Current Status:** [Draft / Development]
-**Lead Engineer:** [Your Name]
+Ambient voice-intent aggregation system. **Sense → Think → Act** without storing conversations.
 
-## 🚨 CRITICAL: READ BEFORE CLONING
+## 🚀 Quick Start
 
-This repository follows a **STRICT ISOLATION** policy.
-To prevent merge conflicts and ensure our demo works on stage, you are restricted to specific directories.
-
-### 📂 Repository Structure
-
-```text
-/
-├── core/                   # [READ-ONLY] Shared Logic & AI Pipeline
-│   ├── ai_pipeline/        # Whisper + LLM processing
-│   ├── dedalus_agent/      # State Machine (The "Brain")
-│   ├── payments/           # Stripe / Dummy transaction logic
-│   └── config/             # Global constants & feature flags
-│
-├── frontend-shell/         # [READ-ONLY] The React Host App
-│   ├── api-client/         # Mock data & Server types
-│   └── shared-types.ts     # The JSON contracts we all agree on
-│
-├── members/                # [YOUR WORKSPACE]
-│   ├── member1_threejs/    # 3D Visuals & Shaders
-│   ├── member2_dashboard/  # Analytics Charts
-│   └── member3_pitch_ui/   # Slides & Landing Page
-│
-└── docs/                   # Documentation & Logs
-    ├── progress/           # DAILY PROGRESS LOGS (Mandatory)
-    └── architecture/       # System diagrams
+```bash
+npm install
+npm run dev
 ```
 
-### 👥 Your Role & Rules
+Navigate to:
+- `/` – Pitch Deck
+- `/demo` – Voice2Ad (3D + Dashboard)
+- `/census` – **Census Ambient Intent Demo** (NEW)
 
-identify your role below and **READ YOUR SPECIFIC README FIRST**.
+## 📁 Project Structure
 
-| Role | Responsibility | README |
-| :--- | :--- | :--- |
-| **Lead Engineer** | Architecture, Core API, Merging PRs | [README_LEAD_ENGINEER.md](./README_LEAD_ENGINEER.md) |
-| **Member 1** | Three.js Visuals, Shaders, WebGL | [README_MEMBER_1_THREEJS.md](./README_MEMBER_1_THREEJS.md) |
-| **Member 2** | Dashboard, Real-time Charts | [README_MEMBER_2_DASHBOARD.md](./README_MEMBER_2_DASHBOARD.md) |
-| **Member 3** | Pitch Deck, UI Polish, Script | [README_MEMBER_3_PITCH_UI.md](./README_MEMBER_3_PITCH_UI.md) |
+```
+frontend-shell/
+├── Census/                    # Ambient intent demo
+│   ├── CensusDemo.tsx         # Main component
+│   ├── Toast.tsx
+│   ├── panels/
+│   │   ├── RecordingPanel.tsx
+│   │   ├── TrendsPanel.tsx
+│   │   └── ScreenDisplayPanel.tsx
+│   └── index.ts               # Barrel export
+│
+├── utils/
+│   └── census/                # Demo utilities
+│       ├── intentExtractor.ts # Rule-based NLP
+│       ├── demandStore.ts     # Aggregation + rolling windows
+│       └── index.ts           # Barrel export
+│
+├── shared-types/              # Shared TypeScript types
+├── App.tsx                    # Route orchestrator
+└── ...
+```
+
+## 🎯 Census Demo
+
+### How It Works
+
+1. **Record** ambient audio in a zone
+2. **Extract** intent + entity (no transcript stored)
+3. **Aggregate** anonymized counts per zone/time window
+4. **Display** trending demands dynamically
+
+### Zones
+- Food Court
+- Atrium
+- West Wing
+- Entrance
+
+### Time Windows
+- Last 10 minutes
+- Last hour
+
+### Example
+Record: *"Where can I find Crumbl cookies?"*
+- **Intent:** FIND_STORE
+- **Entity:** Crumbl
+- **Result:** Screen displays "Crumbl → Level 1, Food Court"
+
+## 🔐 Privacy
+
+- ✅ Audio processed ephemerally (discarded after transcription)
+- ✅ No transcripts stored
+- ✅ Only anonymized intent + entity counts retained
+- ✅ No external API calls for user data
+
+## 📖 Documentation
+
+- **CENSUS_GUIDE.md** – Complete Census reference (architecture, extending, testing)
+- **README_MEMBER_*.md** – Team member documentation
+- **README_LEAD_ENGINEER.md** – Lead's integration guide
+
+## 🛠️ Tech Stack
+
+- React 18 + TypeScript
+- Zustand (state)
+- Tailwind CSS
+- Three.js + React Three Fiber (3D)
+- Lucide Icons
+- Recharts (charts)
+
+## 📊 Scripts
+
+```bash
+npm run dev       # Start dev server
+npm run build     # Build for production
+npm run preview   # Preview build
+npm run lint      # Lint code
+npm run test      # Run tests
+```
+
+## 🚀 Next Steps
+
+**To demo:** Go to `/census`, record phrases, watch trends update.
+
+**To extend:** Read CENSUS_GUIDE.md → "Extend This Demo"
+
+**To hand off:** All code is organized and documented. New developers can start immediately.
 
 ---
 
-## ⚡ Merge Conflict Prevention (NON-NEGOTIABLE)
-
-1.  **Branch Naming:**
+Built for HackGT | February 2026
     *   `feat/member1-visuals`
     *   `feat/member2-analytics`
     *   `feat/member3-pitch`

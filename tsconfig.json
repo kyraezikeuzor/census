@@ -35,7 +35,8 @@
     "include": [
         "core",
         "frontend-shell",
-        "members"
+        "members",
+        "vite-env.d.ts"
     ],
     "references": [
         {

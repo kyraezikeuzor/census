@@ -15,3 +15,50 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+body[data-theme='light'] {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body[data-theme='light'] .bg-zinc-950 { background-color: #f8fafc !important; }
+body[data-theme='light'] .border-white\/10 { border-color: rgba(15,23,42,0.12) !important; }
+body[data-theme='light'] .border-white\/5 { border-color: rgba(15,23,42,0.08) !important; }
+body[data-theme='light'] .text-zinc-400 { color: #475569 !important; }
+body[data-theme='light'] .text-zinc-500 { color: #64748b !important; }
+body[data-theme='light'] .text-zinc-600 { color: #94a3b8 !important; }
+body[data-theme='light'] .border-zinc-700 { border-color: rgba(15,23,42,0.4) !important; }
+body[data-theme='light'] .bg-black\/50 { background-color: rgba(241,245,249,0.8) !important; }
+
+/* Darker UI controls in light mode */
+body[data-theme='light'] .bg-zinc-900 { background-color: #0b1220 !important; }
+body[data-theme='light'] .bg-zinc-900\/80 { background-color: rgba(11,18,32,0.9) !important; }
+body[data-theme='light'] .bg-zinc-900\/50 { background-color: rgba(11,18,32,0.75) !important; }
+body[data-theme='light'] .bg-zinc-900\/40 { background-color: rgba(11,18,32,0.7) !important; }
+body[data-theme='light'] .bg-zinc-900\/60 { background-color: rgba(11,18,32,0.8) !important; }
+body[data-theme='light'] .bg-zinc-800 { background-color: #111827 !important; }
+body[data-theme='light'] .bg-zinc-800\/60 { background-color: rgba(17,24,39,0.85) !important; }
+body[data-theme='light'] .bg-zinc-700 { background-color: #111827 !important; }
+body[data-theme='light'] .text-white { color: #f8fafc !important; }
+body[data-theme='light'] .bg-blue-600,
+body[data-theme='light'] .bg-red-600,
+body[data-theme='light'] .bg-zinc-700 {
+  color: #f8fafc !important;
+}
+
+/* Ad screen gradients in light mode */
+body[data-theme='light'] .from-emerald-900\/20 {
+  --tw-gradient-from: rgba(5, 150, 105, 0.35) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(5, 150, 105, 0) var(--tw-gradient-to-position);
+}
+body[data-theme='light'] .from-fuchsia-900\/30 {
+  --tw-gradient-from: rgba(192, 38, 211, 0.35) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(192, 38, 211, 0) var(--tw-gradient-to-position);
+}
+body[data-theme='light'] .from-red-900\/30 {
+  --tw-gradient-from: rgba(220, 38, 38, 0.35) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgba(220, 38, 38, 0) var(--tw-gradient-to-position);
+}
+body[data-theme='light'] .to-zinc-900\/40 {
+  --tw-gradient-to: rgba(15, 23, 42, 0.25) var(--tw-gradient-to-position);
+}

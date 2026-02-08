@@ -11,19 +11,21 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@react-three/drei": "9.70.0",
+    "@react-three/fiber": "8.13.0",
+    "clsx": "1.2.1",
+    "framer-motion": "10.12.16",
+    "hark": "^1.2.3",
+    "lucide-react": "0.244.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "three": "0.150.0",
-    "@react-three/fiber": "8.13.0",
-    "@react-three/drei": "9.70.0",
-    "framer-motion": "10.12.16",
-    "zustand": "4.3.8",
-    "lucide-react": "0.244.0",
     "recharts": "2.7.2",
-    "clsx": "1.2.1",
-    "tailwind-merge": "1.13.2"
+    "tailwind-merge": "1.13.2",
+    "three": "0.150.0",
+    "zustand": "4.3.8"
   },
   "devDependencies": {
+    "@types/hark": "^1.2.5",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
     "@types/three": "0.150.0",

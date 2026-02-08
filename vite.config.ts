@@ -9,6 +9,7 @@ export default defineConfig({
             '@core': resolve(__dirname, 'core'),
             '@frontend': resolve(__dirname, 'frontend-shell'),
             '@members': resolve(__dirname, 'members'),
+            'frontend-shell': resolve(__dirname, 'frontend-shell'),
         },
     },
     server: {
